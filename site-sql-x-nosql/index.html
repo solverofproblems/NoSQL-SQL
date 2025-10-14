@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL vs NoSQL - Guia Completo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-database"></i>
+                <span>SQL vs NoSQL</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#intro" class="nav-link">Introdução</a></li>
+                <li><a href="#sql" class="nav-link">SQL</a></li>
+                <li><a href="#nosql" class="nav-link">NoSQL</a></li>
+                <li><a href="#comparison" class="nav-link">Comparação</a></li>
+                <li><a href="#use-cases" class="nav-link">Casos de Uso</a></li>
+                <li><a href="#conclusion" class="nav-link">Conclusão</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">SQL vs NoSQL</span>
+                <p style="font-size: 30px;">Comparação</p> 
+            </h1>
+            <p class="hero-subtitle">
+                Descubra as diferenças entre bancos de dados relacionais e não-relacionais
+            </p>
+            <div class="hero-buttons">
+                <a href="#intro" class="btn btn-primary">Começar</a>
+                <a href="#comparison" class="btn btn-secondary">Comparar</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="database-icons">
+                <a href="#sql" class="db-icon sql-icon">
+                    <i class="fas fa-table"></i>
+                    <span>SQL</span>
+                </a>
+                <div class="vs-text">VS</div>
+                <a href="#nosql" class="db-icon nosql-icon">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>NoSQL</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Introdução</h2>
+                <p class="section-subtitle">O que são bancos de dados?</p>
+            </div>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p class="intro-description">
+                        Bancos de dados são sistemas que permitem armazenar, organizar e gerenciar informações de forma estruturada ou flexível. 
+                        Eles são essenciais para empresas, aplicativos e serviços digitais, garantindo que os dados possam ser acessados, 
+                        atualizados e analisados de forma eficiente.
+                    </p>
+                    <div class="db-types">
+                        <div class="db-type-card">
+                            <div class="db-type-icon">
+                                <i class="fas fa-table"></i>
+                            </div>
+                            <h3>Relacionais (SQL)</h3>
+                            <p>Focados em dados estruturados e consistência</p>
+                        </div>
+                        <div class="db-type-card">
+                            <div class="db-type-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h3>Não-relacionais (NoSQL)</h3>
+                            <p>Focados em flexibilidade e escalabilidade para grandes volumes de dados</p>
+                        </div>
+                    </div>
+                    <div class="intro-highlight">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>
+                            Entender as diferenças entre SQL e NoSQL ajuda a escolher a tecnologia mais adequada para cada aplicação, 
+                            garantindo performance e confiabilidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SQL Section -->
+    <section id="sql" class="section sql-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-table"></i>
+                    Banco de Dados Relacional (SQL)
+                </h2>
+                <p class="section-subtitle">O que é SQL?</p>
+            </div>
+            <div class="sql-content">
+                <div class="sql-description">
+                    <p>
+                        Bancos de dados relacionais armazenam informações em tabelas com linhas e colunas, permitindo relacionamentos 
+                        complexos entre diferentes conjuntos de dados. São ideais para sistemas que exigem consistência, integridade e transações seguras.
+                    </p>
+                </div>
+                
+                <div class="sql-features">
+                    <h3>Características principais:</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-database"></i>
+                            <h4>Modelo de dados</h4>
+                            <p>Tabelas com registros (linhas) e atributos (colunas)</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-lock"></i>
+                            <h4>Esquema</h4>
+                            <p>Fixo, exige planejamento prévio</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-arrow-up"></i>
+                            <h4>Escalabilidade</h4>
+                            <p>Vertical, aumentando a capacidade de um único servidor</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-search"></i>
+                            <h4>Consultas</h4>
+                            <p>SQL padrão, com joins e operações complexas</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Transações</h4>
+                            <p>Modelo ACID (Atomicidade, Consistência, Isolamento e Durabilidade)</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-link"></i>
+                            <h4>Integridade</h4>
+                            <p>PK, FK, UK, CK, NN, normalização</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h3><i class="fas fa-check-circle"></i> Vantagens</h3>
+                        <ul>
+                            <li>Garantia de consistência e integridade dos dados</li>
+                            <li>Ideal para dados estruturados e críticos</li>
+                            <li>Suporte a transações complexas</li>
+                            <li>Ferramentas maduras para análise e relatórios</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h3><i class="fas fa-times-circle"></i> Desvantagens</h3>
+                        <ul>
+                            <li>Escalabilidade limitada (vertical)</li>
+                            <li>Difícil adaptação a mudanças rápidas no esquema</li>
+                            <li>Menos eficiente para grandes volumes de dados não estruturados</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="examples-section">
+                    <h3>Exemplos de bancos de dados SQL</h3>
+                    <div class="sgbd-grid">
+                        <div class="sgbd-item">MySQL</div>
+                        <div class="sgbd-item">PostgreSQL</div>
+                        <div class="sgbd-item">Oracle</div>
+                        <div class="sgbd-item">SQL Server</div>
+                        <div class="sgbd-item">DB2</div>
+                    </div>
+                </div>
+
+                <div class="practical-examples">
+                    <h3>Exemplos práticos:</h3>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <i class="fas fa-university"></i>
+                            <span>Sistemas financeiros: bancos e cartões de crédito</span>
+                        </div>
+                        <div class="example-item">
+                            <i class="fas fa-hospital"></i>
+                            <span>Hospitais: pacientes, médicos, exames e agendamentos</span>
+                        </div>
+                        <div class="example-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>E-commerce tradicional: estoque, pedidos e pagamentos</span>
+                        </div>
+                        <div class="example-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>ERP e relatórios corporativos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NoSQL Section -->
+    <section id="nosql" class="section nosql-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram"></i>
+                    Banco de Dados NoSQL
+                </h2>
+                <p class="section-subtitle">O que é NoSQL?</p>
+            </div>
+            <div class="nosql-content">
+                <div class="nosql-description">
+                    <p>
+                        Bancos de dados não-relacionais foram criados para lidar com aplicações modernas, distribuídas e escaláveis, 
+                        onde os dados podem ser variados, grandes ou em constante mudança.
+                    </p>
+                </div>
+                
+                <div class="nosql-features">
+                    <h3>Características principais:</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-file-alt"></i>
+                            <h4>Modelo de dados</h4>
+                            <p>Documentos, chave-valor, colunas ou grafos</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-unlock"></i>
+                            <h4>Esquema</h4>
+                            <p>Dinâmico, sem necessidade de estrutura fixa</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            <h4>Escalabilidade</h4>
+                            <p>Horizontal, distribuída em múltiplos servidores</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-code"></i>
+                            <h4>Consultas</h4>
+                            <p>Via APIs e linguagens específicas</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-sync"></i>
+                            <h4>Transações</h4>
+                            <p>Modelo BASE (Basically Available, Soft state, Eventual consistency)</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-rocket"></i>
+                            <h4>Performance</h4>
+                            <p>Otimizado para Big Data e alta disponibilidade</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h3><i class="fas fa-check-circle"></i> Vantagens</h3>
+                        <ul>
+                            <li>Flexível, permite mudanças rápidas no modelo de dados</li>
+                            <li>Escalável para grandes volumes</li>
+                            <li>Excelente performance em leituras e escritas em tempo real</li>
+                            <li>Alta tolerância a falhas</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h3><i class="fas fa-times-circle"></i> Desvantagens</h3>
+                        <ul>
+                            <li>Consistência eventual (nem sempre imediata)</li>
+                            <li>Difícil modelar relações complexas</li>
+                            <li>Ferramentas de análise e relatórios menos maduras</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="nosql-types">
+                    <h3>Tipos e exemplos bancos de dados NoSQL:</h3>
+                    <div class="types-grid">
+                        <div class="type-card">
+                            <i class="fas fa-key"></i>
+                            <h4>Chave-Valor</h4>
+                            <p>Redis, DynamoDB</p>
+                            <span class="use-case">Sessões de usuários, cache</span>
+                        </div>
+                        <div class="type-card">
+                            <i class="fas fa-columns"></i>
+                            <h4>Colunar</h4>
+                            <p>Cassandra, HBase</p>
+                            <span class="use-case">Análise de logs, Big Data</span>
+                        </div>
+                        <div class="type-card">
+                            <i class="fas fa-share-alt"></i>
+                            <h4>Grafos</h4>
+                            <p>Neo4j, ArangoDB</p>
+                            <span class="use-case">Redes sociais, recomendações</span>
+                        </div>
+                        <div class="type-card">
+                            <i class="fas fa-file-text"></i>
+                            <h4>Documentos</h4>
+                            <p>MongoDB, CouchDB</p>
+                            <span class="use-case">Catálogos, mídias sociais</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practical-examples">
+                    <h3>Exemplos práticos:</h3>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <i class="fas fa-share-alt"></i>
+                            <span>Redes sociais: posts, curtidas, comentários</span>
+                        </div>
+                        <div class="example-item">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Streaming: Netflix, YouTube, Spotify</span>
+                        </div>
+                        <div class="example-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Mensagens em tempo real: WhatsApp, Telegram</span>
+                        </div>
+                        <div class="example-item">
+                            <i class="fas fa-map"></i>
+                            <span>Mapas e rotas: conexões entre locais</span>
+                        </div>
+                        <div class="example-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>IoT: sensores e dispositivos conectados</span>
+                        </div>
+                        <div class="example-item">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>E-commerce escalável: Amazon, eBay</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="section comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comparação SQL x NoSQL</h2>
+                <p class="section-subtitle">Análise detalhada das diferenças</p>
+            </div>
+            <div class="comparison-content">
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Critério</th>
+                                <th class="sql-col">SQL</th>
+                                <th class="nosql-col">NoSQL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Estrutura de Dados</strong></td>
+                                <td class="sql-col">Tabelas (linhas e colunas)</td>
+                                <td class="nosql-col">Flexível (JSON, chave-valor, grafos, colunas)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Esquema</strong></td>
+                                <td class="sql-col">Fixo</td>
+                                <td class="nosql-col">Dinâmico</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Escalabilidade</strong></td>
+                                <td class="sql-col">Vertical</td>
+                                <td class="nosql-col">Horizontal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Consistência</strong></td>
+                                <td class="sql-col">Forte (ACID)</td>
+                                <td class="nosql-col">Eventual (BASE)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Consultas</strong></td>
+                                <td class="sql-col">SQL padrão, complexas</td>
+                                <td class="nosql-col">APIs e linguagens próprias</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Desempenho</strong></td>
+                                <td class="sql-col">Excelente em dados estruturados</td>
+                                <td class="nosql-col">Excelente em Big Data e tempo real</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Relações</strong></td>
+                                <td class="sql-col">Muito fortes</td>
+                                <td class="nosql-col">Fracas ou inexistentes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Exemplos de uso</strong></td>
+                                <td class="sql-col">Bancos, hospitais, ERP, relatórios</td>
+                                <td class="nosql-col">Redes sociais, streaming, IoT, Big Data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="comparison-summary">
+                    <div class="summary-card">
+                        <h3>Resumo</h3>
+                        <p>
+                            SQL é ideal para dados estruturados e críticos, enquanto NoSQL é indicado para grandes volumes de dados 
+                            dinâmicos, distribuídos e aplicações modernas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="section use-cases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Casos de Uso Detalhados</h2>
+                <p class="section-subtitle">Quando usar cada tipo de banco de dados</p>
+            </div>
+            <div class="use-cases-content">
+                <div class="use-case-category">
+                    <h3><i class="fas fa-table"></i> SQL</h3>
+                    <div class="use-case-grid">
+                        <div class="use-case-card">
+                            <i class="fas fa-university"></i>
+                            <h4>Bancos e cartões</h4>
+                            <p>Transações financeiras seguras</p>
+                        </div>
+                        <div class="use-case-card">
+                            <i class="fas fa-hospital"></i>
+                            <h4>Hospitais</h4>
+                            <p>Integração de dados de pacientes, exames e médicos</p>
+                        </div>
+                        <div class="use-case-card">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h4>E-commerce tradicional</h4>
+                            <p>Estoque, pedidos e pagamentos</p>
+                        </div>
+                        <div class="use-case-card">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>ERP corporativo</h4>
+                            <p>Integração de informações de múltiplos setores</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="use-case-category">
+                    <h3><i class="fas fa-project-diagram"></i> NoSQL</h3>
+                    <div class="use-case-grid">
+                        <div class="use-case-card">
+                            <i class="fas fa-share-alt"></i>
+                            <h4>Redes sociais</h4>
+                            <p>Posts, curtidas e comentários</p>
+                        </div>
+                        <div class="use-case-card">
+                            <i class="fas fa-play-circle"></i>
+                            <h4>Streaming</h4>
+                            <p>Netflix, YouTube, Spotify — histórico de visualizações e recomendações</p>
+                        </div>
+                        <div class="use-case-card">
+                            <i class="fas fa-comments"></i>
+                            <h4>Mensagens em tempo real</h4>
+                            <p>WhatsApp, Telegram — envio e sincronização instantânea</p>
+                        </div>
+                        <div class="use-case-card">
+                            <i class="fas fa-map"></i>
+                            <h4>Mapas e rotas</h4>
+                            <p>Google Maps — cálculos de rotas e conexões</p>
+                        </div>
+                        <div class="use-case-card">
+                            <i class="fas fa-wifi"></i>
+                            <h4>IoT</h4>
+                            <p>Monitoramento de sensores e dispositivos conectados</p>
+                        </div>
+                        <div class="use-case-card">
+                            <i class="fas fa-shopping-bag"></i>
+                            <h4>E-commerce escalável</h4>
+                            <p>Amazon, eBay — grandes volumes de produtos e pedidos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="section conclusion-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Conclusão</h2>
+                <p class="section-subtitle">Escolhendo a tecnologia certa</p>
+            </div>
+            <div class="conclusion-content">
+                <div class="conclusion-text">
+                    <p>
+                        Escolher entre SQL e NoSQL depende do tipo de dados, da aplicação e das necessidades de escalabilidade:
+                    </p>
+                    <div class="conclusion-points">
+                        <div class="conclusion-point">
+                            <i class="fas fa-table"></i>
+                            <div>
+                                <h4>SQL</h4>
+                                <p>Ideal para transações críticas e dados estruturados</p>
+                            </div>
+                        </div>
+                        <div class="conclusion-point">
+                            <i class="fas fa-project-diagram"></i>
+                            <div>
+                                <h4>NoSQL</h4>
+                                <p>Ideal para flexibilidade, grande volume de dados e aplicações distribuídas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <h4>Dica prática</h4>
+                        <p>
+                            Muitas empresas usam uma combinação de SQL e NoSQL, aproveitando os pontos fortes de cada modelo, 
+                            dependendo do tipo de dados e da necessidade do sistema.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-database"></i>
+                        <span>SQL vs NoSQL</span>
+                    </div>
+                    <p class="footer-description">
+                        Guia completo para entender as diferenças entre bancos de dados relacionais e não-relacionais.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> mavi.fecap@gmail.com</p>
+                        <p><i class="fas fa-envelope"></i> carloselima373@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 SQL vs NoSQL. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
