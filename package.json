@@ -1,0 +1,25 @@
+{
+  "name": "sql-vs-nosql-site",
+  "version": "1.0.0",
+  "description": "Site comparativo entre SQL e NoSQL - Guia completo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "sql",
+    "nosql",
+    "database",
+    "comparison",
+    "guide"
+  ],
+  "author": "Eduardo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
