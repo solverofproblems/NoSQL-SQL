@@ -4,8 +4,12 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Servir arquivos estáticos da pasta site-sql-x-nosql
-app.use(express.static(path.join(__dirname, 'site-sql-x-nosql')));
+// Middleware para servir arquivos estáticos da pasta site-sql-x-nosql
+app.use(express.static(path.join(__dirname, 'site-sql-x-nosql'), {
+    maxAge: '1d', // Cache por 1 dia
+    etag: true,
+    lastModified: true
+}));
 
 // Rota principal - servir o index.html
 app.get('/', (req, res) => {
